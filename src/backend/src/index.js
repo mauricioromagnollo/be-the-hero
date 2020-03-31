@@ -12,6 +12,6 @@ app.use(express.json());
 app.use(routes);
 app.use(errors());
 
-app.listen(process.env.PORT);
-
-console.log(`[*] ${process.env.APP_NAME} Server Running...\n[*] PORT: ${process.env.PORT}`);
+app.listen(process.env.PORT, () => {
+  console.log(`[*] ${process.env.APP_NAME} Server Running...\n[*] PORT: ${process.env.PORT}`);
+});
